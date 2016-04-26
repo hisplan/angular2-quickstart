@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Angular 2 QuickStart</title>
+  <title>Anomaly Detection Drilldown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 
@@ -15,6 +15,7 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.js"></script>
 
   <!-- 2. Configure SystemJS -->
   <script>
@@ -37,17 +38,20 @@
     }
   </style>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
 
 </head>
 
 <!-- 3. Display the application -->
 
 <body>
+  
   <my-app>Loading...</my-app>
-  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-  <div id="chartdiv"></div>
   <script src="drilldown-chart.js"></script>
 </body>
 

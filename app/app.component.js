@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/http', './pub.component', './pub-adv.component', './pub-adv.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,21 +10,45 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, http_1, pub_component_1, pub_adv_component_1, pub_adv_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+            },
+            function (pub_component_1_1) {
+                pub_component_1 = pub_component_1_1;
+            },
+            function (pub_adv_component_1_1) {
+                pub_adv_component_1 = pub_adv_component_1_1;
+            },
+            function (pub_adv_service_1_1) {
+                pub_adv_service_1 = pub_adv_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = 'domainhold_RON';
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    initChart();
+                };
+                AppComponent.prototype.initChart = function () {
+                    console.log('x');
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>domaninhold_RON</h1>'
+                        templateUrl: 'app/app.component.html',
+                        directives: [pub_component_1.PubComponent, pub_adv_component_1.PubAdvComponent],
+                        providers: [
+                            http_1.HTTP_PROVIDERS,
+                            pub_adv_service_1.PubAdvService
+                        ]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
